@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalesPulse - Advanced Performance Dashboard</title>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            slate: {
+              850: '#142035',
+              900: '#0d1626',
+              950: '#080f1e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans antialiased overflow-x-hidden">
+
+  <!-- Main Root Layout -->
+  <div class="app-root flex min-h-screen">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar -translate-x-full lg:translate-x-0" id="app-sidebar">
+      <div class="sidebar-logo flex items-center gap-3 px-6 py-5 border-b border-slate-800/80 justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="p-1.5 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg text-white">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <span class="text-base font-extrabold text-slate-100 tracking-wide bg-gradient-to-r from-slate-100 to-indigo-200 bg-clip-text text-transparent">SalesPulse</span>
+        </div>
+        <button class="lg:hidden text-slate-400 hover:text-slate-200" id="sidebar-close-btn">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <!-- Nav Links -->
+      <nav class="flex-1 px-3 py-4 space-y-1.5 overflow-y-auto">
+        <button class="nav-item nav-item-active" data-target-view="dashboard">
+          <i data-lucide="layout-dashboard" class="w-4.5 h-4.5"></i>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-target-view="graphs">
+          <i data-lucide="line-chart" class="w-4.5 h-4.5"></i>
+          <span>Graphs</span>
+        </button>
+        <button class="nav-item" data-target-view="reports">
+          <i data-lucide="file-text" class="w-4.5 h-4.5"></i>
+          <span>Reports</span>
+        </button>
+        <button class="nav-item" data-target-view="statistics">
+          <i data-lucide="bar-chart-3" class="w-4.5 h-4.5"></i>
+          <span>Statistics</span>
+        </button>
+        <button class="nav-item" data-target-view="export">
+          <i data-lucide="download" class="w-4.5 h-4.5"></i>
+          <span>Export Data</span>
+        </button>
+      </nav>
+      
+      <!-- App Footer / Active Rows Counter -->
+      <div class="p-4 border-t border-slate-800/80">
+        <div class="p-3 bg-slate-850/40 rounded-xl border border-indigo-500/10 text-center">
+          <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Active Records</div>
+          <div class="text-lg font-extrabold text-indigo-400 mt-0.5" id="sidebar-total-count">0</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content flex-1 flex flex-col min-w-0">
+      
+      <!-- Topbar Header -->
+      <header class="topbar sticky top-0 bg-slate-900/85 backdrop-blur-md border-b border-slate-800/80 px-6 py-4 flex items-center justify-between z-30">
+        <div class="flex items-center gap-3">
+          <button class="lg:hidden p-2 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700/80 transition text-slate-300" id="sidebar-toggle-btn">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div>
+            <h1 class="text-base lg:text-lg font-bold text-slate-100 tracking-tight" id="page-view-title">Dashboard</h1>
+            <p class="text-[11px] text-slate-400 mt-0.5" id="page-view-desc">Sales performance summary metrics.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <button class="flex items-center gap-1.5 px-3 py-1.5 lg:py-2 bg-gradient-to-br from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 active:scale-95 text-white text-xs font-bold rounded-xl shadow-lg shadow-indigo-500/15 cursor-pointer transition-all duration-200" id="open-add-modal-btn">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">Add Record</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Scroll Container -->
+      <div class="page-content flex-1 p-6 overflow-y-auto">
+        
+        <!-- Shared Filter Bar -->
+        <section class="mb-6 p-4 bg-slate-950/40 border border-slate-800/60 rounded-2xl flex flex-wrap gap-4 items-end" id="filter-bar">
+          <!-- Date Range Start -->
+          <div class="flex flex-col gap-1.5 min-w-[140px] flex-1 sm:flex-initial">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Start Date</label>
+            <input type="date" id="filter-start-date" class="w-full bg-slate-900 border border-slate-800 hover:border-slate-700 focus:border-indigo-500 rounded-xl px-3 py-1.5 text-xs text-slate-200 outline-none transition" value="2025-01-01">
+          </div>
+          <!-- Date Range End -->
+          <div class="flex flex-col gap-1.5 min-w-[140px] flex-1 sm:flex-initial">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">End Date</label>
+            <input type="date" id="filter-end-date" class="w-full bg-slate-900 border border-slate-800 hover:border-slate-700 focus:border-indigo-500 rounded-xl px-3 py-1.5 text-xs text-slate-200 outline-none transition" value="2025-06-30">
+          </div>
+          <!-- Region Filter -->
+          <div class="flex flex-col gap-1.5 min-w-[120px] flex-1 sm:flex-initial">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Region</label>
+            <select id="filter-region" class="w-full bg-slate-900 border border-slate-800 hover:border-slate-700 focus:border-indigo-500 rounded-xl px-3 py-1.5 text-xs text-slate-200 outline-none transition cursor-pointer">
+              <option value="All">All Regions</option>
+              <option value="North">North</option>
+              <option value="South">South</option>
+              <option value="East">East</option>
+              <option value="West">West</option>
+            </select>
+          </div>
+          <!-- Category Filter -->
+          <div class="flex flex-col gap-1.5 min-w-[140px] flex-1 sm:flex-initial">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Category</label>
+            <select id="filter-category" class="w-full bg-slate-900 border border-slate-800 hover:border-slate-700 focus:border-indigo-500 rounded-xl px-3 py-1.5 text-xs text-slate-200 outline-none transition cursor-pointer">
+              <option value="All">All Categories</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Sports">Sports</option>
+              <option value="Home & Garden">Home & Garden</option>
+            </select>
+          </div>
+          
+          <button class="flex items-center gap-1 px-4 py-2 bg-slate-800 hover:bg-slate-750 border border-slate-700/60 rounded-xl text-xs font-semibold text-slate-300 hover:text-slate-100 transition duration-150 active:scale-95 cursor-pointer ml-auto shrink-0" id="filter-reset-btn">
+            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+            <span>Reset</span>
+          </button>
+        </section>
+
+        <!-- VIEW PANELS -->
+
+        <!-- 1. Dashboard View -->
+        <div class="view-panel space-y-6 page-enter" id="view-dashboard">
+          
+          <!-- KPI Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            
+            <!-- Card 1: Total Sales -->
+            <div class="kpi-card-anim p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-indigo-500/10 hover:border-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/5 transition duration-300">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-slate-400 font-bold tracking-wide uppercase">Total Sales</span>
+                <div class="p-2 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+                  <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-2xl font-extrabold text-slate-100" id="kpi-sales-value">$0</span>
+                <span class="text-[11px] font-bold px-1.5 py-0.5 rounded-full" id="kpi-sales-diff">0.0%</span>
+              </div>
+              <p class="text-[10px] text-slate-500 mt-2">vs previous period</p>
+            </div>
+
+            <!-- Card 2: Total Profit -->
+            <div class="kpi-card-anim p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-indigo-500/10 hover:border-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/5 transition duration-300" style="animation-delay: 100ms">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-slate-400 font-bold tracking-wide uppercase">Total Profit</span>
+                <div class="p-2 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
+                  <i data-lucide="trending-up" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-2xl font-extrabold text-slate-100" id="kpi-profit-value">$0</span>
+                <span class="text-[11px] font-bold px-1.5 py-0.5 rounded-full" id="kpi-profit-diff">0.0%</span>
+              </div>
+              <p class="text-[10px] text-slate-500 mt-2">vs previous period</p>
+            </div>
+
+            <!-- Card 3: Total Orders -->
+            <div class="kpi-card-anim p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-indigo-500/10 hover:border-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/5 transition duration-300" style="animation-delay: 200ms">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-slate-400 font-bold tracking-wide uppercase">Total Orders</span>
+                <div class="p-2 bg-amber-500/10 text-amber-400 rounded-xl border border-amber-500/20">
+                  <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-2xl font-extrabold text-slate-100" id="kpi-orders-value">0</span>
+                <span class="text-[11px] font-bold px-1.5 py-0.5 rounded-full" id="kpi-orders-diff">0.0%</span>
+              </div>
+              <p class="text-[10px] text-slate-500 mt-2">vs previous period</p>
+            </div>
+
+            <!-- Card 4: Avg Order Value -->
+            <div class="kpi-card-anim p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-indigo-500/10 hover:border-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/5 transition duration-300" style="animation-delay: 300ms">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-slate-400 font-bold tracking-wide uppercase">Avg Order Value</span>
+                <div class="p-2 bg-cyan-500/10 text-cyan-400 rounded-xl border border-cyan-500/20">
+                  <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-2xl font-extrabold text-slate-100" id="kpi-aov-value">$0</span>
+                <span class="text-[11px] font-bold px-1.5 py-0.5 rounded-full" id="kpi-aov-diff">0.0%</span>
+              </div>
+              <p class="text-[10px] text-slate-500 mt-2">vs previous period</p>
+            </div>
+            
+          </div>
+          
+          <!-- Summary Header -->
+          <div class="px-1 text-slate-400 text-xs">
+            Showing <span class="text-slate-100 font-bold" id="dashboard-records-count">0</span> records · Total Revenue <span class="text-indigo-400 font-bold" id="dashboard-revenue-sum">$0</span>
+          </div>
+
+          <!-- Charts Grid (4 charts) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Chart 1: Monthly Sales -->
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+              <h3 class="text-sm font-bold text-slate-200 mb-4 flex items-center justify-between">
+                <span>Monthly Sales Volume</span>
+                <span class="text-[10px] text-indigo-400 font-bold px-2 py-0.5 bg-indigo-500/5 rounded border border-indigo-500/10">Bar Chart</span>
+              </h3>
+              <div id="dashboard-sales-chart" class="w-full"></div>
+            </div>
+
+            <!-- Chart 2: Monthly Profit -->
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+              <h3 class="text-sm font-bold text-slate-200 mb-4 flex items-center justify-between">
+                <span>Monthly Profit Performance</span>
+                <span class="text-[10px] text-emerald-400 font-bold px-2 py-0.5 bg-emerald-500/5 rounded border border-emerald-500/10">Area Chart</span>
+              </h3>
+              <div id="dashboard-profit-chart" class="w-full"></div>
+            </div>
+
+            <!-- Chart 3: Category breakdown -->
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+              <h3 class="text-sm font-bold text-slate-200 mb-4 flex items-center justify-between">
+                <span>Sales by Product Category</span>
+                <span class="text-[10px] text-amber-400 font-bold px-2 py-0.5 bg-amber-500/5 rounded border border-amber-500/10">Donut Chart</span>
+              </h3>
+              <div id="dashboard-category-chart" class="w-full flex justify-center"></div>
+            </div>
+
+            <!-- Chart 4: Region breakdown -->
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+              <h3 class="text-sm font-bold text-slate-200 mb-4 flex items-center justify-between">
+                <span>Sales & Profit by Region</span>
+                <span class="text-[10px] text-indigo-400 font-bold px-2 py-0.5 bg-indigo-500/5 rounded border border-indigo-500/10">Double Bar</span>
+              </h3>
+              <div id="dashboard-region-chart" class="w-full"></div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- 2. Graphs View -->
+        <div class="view-panel space-y-6 hidden" id="view-graphs">
+          
+          <!-- Full-width Area Chart -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h3 class="text-sm font-bold text-slate-200">Monthly Revenue Trend</h3>
+                <p class="text-[10px] text-slate-450 mt-0.5">Timeline performance of sales matching filter criteria</p>
+              </div>
+              <span class="text-[10px] text-indigo-400 font-bold px-2 py-0.5 bg-indigo-500/5 rounded border border-indigo-500/10">Area Trend</span>
+            </div>
+            <div id="graphs-revenue-chart" class="w-full"></div>
+          </div>
+
+          <!-- Product performance & Category Dist -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Product Bar Chart -->
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-sm font-bold text-slate-200">Product Performance</h3>
+                  <p class="text-[10px] text-slate-450 mt-0.5">Top performing products by revenue</p>
+                </div>
+                <span class="text-[10px] text-blue-400 font-bold px-2 py-0.5 bg-blue-500/5 rounded border border-blue-500/10">Horizontal Bar</span>
+              </div>
+              <div id="graphs-product-chart" class="w-full"></div>
+            </div>
+
+            <!-- Category Doughnut -->
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800/80 shadow-md">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-sm font-bold text-slate-200">Revenue Distribution</h3>
+                  <p class="text-[10px] text-slate-450 mt-0.5">Sales distribution across product categories</p>
+                </div>
+                <span class="text-[10px] text-amber-400 font-bold px-2 py-0.5 bg-amber-500/5 rounded border border-amber-500/10">Doughnut</span>
+              </div>
+              <div id="graphs-dist-chart" class="w-full flex justify-center"></div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- 3. Reports View -->
+        <div class="view-panel space-y-5 hidden" id="view-reports">
+          
+          <!-- Table Toolbar -->
+          <div class="flex flex-wrap gap-4 items-center justify-between">
+            <div>
+              <h2 class="text-base font-bold text-slate-100">Sales Records</h2>
+              <p class="text-[11px] text-slate-450 mt-0.5" id="reports-subtitle">0 records match your filters</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 items-center">
+              <div class="relative min-w-[200px]">
+                <input type="text" id="reports-search" placeholder="Search product..." class="w-full pl-8 pr-3 py-1.5 bg-slate-900 border border-slate-800 hover:border-slate-700 focus:border-indigo-500 rounded-xl text-xs outline-none transition">
+                <i data-lucide="search" class="w-3.5 h-3.5 text-slate-450 absolute left-2.5 top-1/2 -translate-y-1/2"></i>
+              </div>
+              
+              <!-- Quick Export Buttons -->
+              <div class="flex items-center gap-1.5 border border-slate-800/60 bg-slate-950/20 p-1 rounded-xl">
+                <button class="p-1.5 hover:bg-slate-800 text-slate-400 hover:text-slate-200 rounded-lg transition active:scale-90 cursor-pointer btn-quick-export" data-format="csv" title="Export CSV">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                </button>
+                <button class="p-1.5 hover:bg-slate-800 text-slate-450 hover:text-slate-200 rounded-lg transition active:scale-90 cursor-pointer btn-quick-export" data-format="json" title="Export JSON">
+                  <i data-lucide="file-code" class="w-4 h-4"></i>
+                </button>
+                <button class="p-1.5 hover:bg-slate-800 text-indigo-400 hover:text-indigo-300 rounded-lg transition active:scale-90 cursor-pointer btn-quick-export" data-format="excel" title="Export Excel">
+                  <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+                </button>
+                <button class="p-1.5 hover:bg-slate-800 text-rose-450 hover:text-rose-300 rounded-lg transition active:scale-90 cursor-pointer btn-quick-export" data-format="pdf" title="Export PDF">
+                  <i data-lucide="file" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table Wrapper -->
+          <div class="bg-slate-900 border border-slate-800/80 rounded-2xl overflow-hidden shadow-md">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-950/40 border-b border-slate-800/80 text-slate-400 font-bold uppercase tracking-wider select-none">
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th" data-sort-key="id">ID</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th" data-sort-key="date">Date</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th" data-sort-key="region">Region</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th" data-sort-key="product">Product</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th" data-sort-key="category">Category</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th text-right" data-sort-key="sales">Sales</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th text-right" data-sort-key="quantity">Qty</th>
+                    <th class="px-5 py-3.5 cursor-pointer hover:bg-slate-850 hover:text-slate-200 transition reports-th text-right" data-sort-key="profit">Profit</th>
+                    <th class="px-5 py-3.5 text-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="reports-table-body" class="divide-y divide-slate-800/40">
+                  <!-- Generated Rows -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Table Pagination Controls -->
+            <div class="px-5 py-3.5 bg-slate-950/20 border-t border-slate-800/80 flex items-center justify-between text-slate-400 font-medium">
+              <div id="reports-pagination-info">Showing 0-0 of 0 entries</div>
+              <div class="flex items-center gap-1.5">
+                <button id="reports-btn-prev" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 disabled:opacity-55 disabled:cursor-not-allowed rounded-lg text-slate-200 transition active:scale-95">Previous</button>
+                <button id="reports-btn-next" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 disabled:opacity-55 disabled:cursor-not-allowed rounded-lg text-slate-200 transition active:scale-95">Next</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- 4. Statistics View -->
+        <div class="view-panel space-y-6 hidden" id="view-statistics">
+          
+          <div class="flex items-center gap-2 mb-2">
+            <div>
+              <h2 class="text-base font-bold text-slate-100">Statistics Overview</h2>
+              <p class="text-[11px] text-slate-450 mt-0.5" id="stats-subtitle">Statistical calculations on 0 records</p>
+            </div>
+          </div>
+
+          <!-- Main Stats Summary Cards Table -->
+          <div class="bg-slate-900 border border-slate-800/80 rounded-2xl overflow-hidden shadow-md">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-950/40 border-b border-slate-800/80 text-slate-400 font-bold uppercase tracking-wider">
+                    <th class="px-6 py-4">Metric Category</th>
+                    <th class="px-6 py-4 text-right">Sum (Total)</th>
+                    <th class="px-6 py-4 text-right">Average (Mean)</th>
+                    <th class="px-6 py-4 text-right">Median</th>
+                    <th class="px-6 py-4 text-right">Minimum</th>
+                    <th class="px-6 py-4 text-right">Maximum</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/40 text-slate-200">
+                  <tr class="hover:bg-slate-800/20 transition">
+                    <td class="px-6 py-4.5 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Sales
+                    </td>
+                    <td class="px-6 py-4.5 text-right font-extrabold" id="stat-sales-sum">$0</td>
+                    <td class="px-6 py-4.5 text-right" id="stat-sales-avg">$0</td>
+                    <td class="px-6 py-4.5 text-right" id="stat-sales-med">$0</td>
+                    <td class="px-6 py-4.5 text-right text-rose-400" id="stat-sales-min">$0</td>
+                    <td class="px-6 py-4.5 text-right text-emerald-400" id="stat-sales-max">$0</td>
+                  </tr>
+                  <tr class="hover:bg-slate-800/20 transition">
+                    <td class="px-6 py-4.5 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Profit
+                    </td>
+                    <td class="px-6 py-4.5 text-right font-extrabold" id="stat-profit-sum">$0</td>
+                    <td class="px-6 py-4.5 text-right" id="stat-profit-avg">$0</td>
+                    <td class="px-6 py-4.5 text-right" id="stat-profit-med">$0</td>
+                    <td class="px-6 py-4.5 text-right text-rose-400" id="stat-profit-min">$0</td>
+                    <td class="px-6 py-4.5 text-right text-emerald-400" id="stat-profit-max">$0</td>
+                  </tr>
+                  <tr class="hover:bg-slate-800/20 transition">
+                    <td class="px-6 py-4.5 font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span> Quantity
+                    </td>
+                    <td class="px-6 py-4.5 text-right font-extrabold" id="stat-quantity-sum">0</td>
+                    <td class="px-6 py-4.5 text-right" id="stat-quantity-avg">0</td>
+                    <td class="px-6 py-4.5 text-right" id="stat-quantity-med">0</td>
+                    <td class="px-6 py-4.5 text-right text-rose-400" id="stat-quantity-min">0</td>
+                    <td class="px-6 py-4.5 text-right text-emerald-400" id="stat-quantity-max">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Region Performance Cards/Grid -->
+          <div class="space-y-3">
+            <h3 class="text-sm font-bold text-slate-200">Region Performance Breakdown</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" id="stats-region-cards-container">
+              <!-- Rendered region panels -->
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- 5. Export Data View -->
+        <div class="view-panel space-y-6 hidden" id="view-export">
+          
+          <!-- Data Export Header -->
+          <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-indigo-500/10 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-md">
+            <div>
+              <h2 class="text-base font-extrabold text-slate-100 flex items-center gap-2">
+                <i data-lucide="download" class="text-indigo-400 w-5 h-5"></i>
+                Data Export Center
+              </h2>
+              <p class="text-slate-400 text-xs mt-1 md:max-w-xl">
+                Export the current active selection of data. Apply filters on the top filter bar to restrict rows before exporting. Currently matches <span class="text-indigo-300 font-bold" id="export-active-rows-label">0</span> entries.
+              </p>
+            </div>
+            <div class="px-4 py-2 bg-indigo-500/10 rounded-xl border border-indigo-500/20 text-center shrink-0">
+              <div class="text-[10px] text-indigo-300 font-bold uppercase tracking-wider">Active Rows</div>
+              <div class="text-xl font-black text-indigo-200 mt-0.5" id="export-active-rows-value">0</div>
+            </div>
+          </div>
+
+          <!-- Grid of export cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- CSV Card -->
+            <div class="group flex flex-col justify-between bg-gradient-to-br from-slate-900 to-slate-900/70 border border-emerald-500/20 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/5 cursor-pointer transition-all duration-300 btn-export-card" data-format="csv">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-[10px] text-slate-500 font-bold font-mono uppercase">.csv</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-200 group-hover:text-emerald-450 transition-colors">CSV Format</h3>
+                <p class="text-slate-450 text-xs mt-2 leading-relaxed">
+                  Standard comma-separated values. Compatible with all data analysis platforms (Python, R, Tableau, Excel).
+                </p>
+              </div>
+              <button class="mt-6 w-full flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 hover:shadow-lg text-white transition cursor-pointer">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Export CSV</span>
+              </button>
+            </div>
+
+            <!-- JSON Card -->
+            <div class="group flex flex-col justify-between bg-gradient-to-br from-slate-900 to-slate-900/70 border border-amber-500/20 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/5 cursor-pointer transition-all duration-300 btn-export-card" data-format="json">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400">
+                    <i data-lucide="file-code" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-[10px] text-slate-500 font-bold font-mono uppercase">.json</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-200 group-hover:text-amber-450 transition-colors">JSON Format</h3>
+                <p class="text-slate-450 text-xs mt-2 leading-relaxed">
+                  JavaScript Object Notation. Structured data object array. Optimized for developers, web APIs, and database migrations.
+                </p>
+              </div>
+              <button class="mt-6 w-full flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl font-bold text-xs bg-amber-600 hover:bg-amber-500 hover:shadow-lg text-white transition cursor-pointer">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Export JSON</span>
+              </button>
+            </div>
+
+            <!-- Excel Card -->
+            <div class="group flex flex-col justify-between bg-gradient-to-br from-slate-900 to-slate-900/70 border border-indigo-500/20 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 cursor-pointer transition-all duration-300 btn-export-card" data-format="excel">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="p-2.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
+                    <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-[10px] text-slate-500 font-bold font-mono uppercase">.xlsx</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-200 group-hover:text-indigo-400 transition-colors">Microsoft Excel</h3>
+                <p class="text-slate-450 text-xs mt-2 leading-relaxed">
+                  Standard spreadsheets (.xlsx) compiled dynamically with styled auto-fit grid widths, row headers, and formatted sheets.
+                </p>
+              </div>
+              <button class="mt-6 w-full flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl font-bold text-xs bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg text-white transition cursor-pointer">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Export Excel</span>
+              </button>
+            </div>
+
+            <!-- PDF Card -->
+            <div class="group flex flex-col justify-between bg-gradient-to-br from-slate-900 to-slate-900/70 border border-rose-500/20 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-rose-500/5 cursor-pointer transition-all duration-300 btn-export-card" data-format="pdf">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="p-2.5 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-450">
+                    <i data-lucide="file" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-[10px] text-slate-500 font-bold font-mono uppercase">.pdf</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-200 group-hover:text-rose-450 transition-colors">PDF Report</h3>
+                <p class="text-slate-450 text-xs mt-2 leading-relaxed">
+                  Printable landscape layout executive report containing key performance metrics summary table followed by records list.
+                </p>
+              </div>
+              <button class="mt-6 w-full flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl font-bold text-xs bg-rose-600 hover:bg-rose-500 hover:shadow-lg text-white transition cursor-pointer">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Export PDF</span>
+              </button>
+            </div>
+
+          </div>
+          
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ADD RECORD MODAL DIALOG -->
+  <div class="modal-overlay" id="add-record-modal">
+    <div class="modal-content p-6 flex flex-col gap-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 class="text-base font-bold text-slate-100 flex items-center gap-1.5">
+          <i data-lucide="plus" class="text-indigo-400 w-5 h-5"></i>
+          Add Sales Record
+        </h3>
+        <button class="text-slate-450 hover:text-slate-200" id="close-add-modal-btn">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <!-- Input Form -->
+      <form class="space-y-4" id="add-record-form" onsubmit="event.preventDefault();">
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Date -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Date</label>
+            <input type="date" name="date" required class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition">
+          </div>
+          <!-- Region -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Region</label>
+            <select name="region" required class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition cursor-pointer">
+              <option value="North">North</option>
+              <option value="South">South</option>
+              <option value="East">East</option>
+              <option value="West">West</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Category -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Category</label>
+            <select name="category" id="modal-form-category" required class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition cursor-pointer">
+              <option value="Electronics">Electronics</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Sports">Sports</option>
+              <option value="Home & Garden">Home & Garden</option>
+            </select>
+          </div>
+          <!-- Product -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Product</label>
+            <select name="product" id="modal-form-product" required class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition cursor-pointer">
+              <!-- Dynamically populated products based on category selection -->
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <!-- Sales -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Sales ($)</label>
+            <input type="number" name="sales" step="0.01" min="1" required placeholder="0.00" class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition">
+          </div>
+          <!-- Quantity -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Quantity</label>
+            <input type="number" name="quantity" min="1" required placeholder="1" class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition">
+          </div>
+          <!-- Profit -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Profit ($)</label>
+            <input type="number" name="profit" step="0.01" required placeholder="0.00" class="bg-slate-900 border border-slate-800 focus:border-indigo-500 rounded-xl px-3 py-2 text-xs outline-none text-slate-250 transition">
+          </div>
+        </div>
+
+        <div class="flex gap-3 justify-end border-t border-slate-800 pt-4 mt-2">
+          <button type="button" class="px-4 py-2 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-850 hover:text-slate-100 text-xs font-semibold transition active:scale-95 cursor-pointer" id="cancel-add-record-btn">
+            Cancel
+          </button>
+          <button type="submit" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-500/10 text-white text-xs font-bold transition active:scale-95 cursor-pointer">
+            Save Record
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-portal-root"></div>
+
+  <!-- CDNs for External Libraries -->
+  <!-- ApexCharts (Loaded already, but ensure script runs) -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- SheetJS (XLSX) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- jsPDF & jsPDF-AutoTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- Application JS Modules -->
+  <script src="/js/api.js"></script>
+  <script src="/js/stats.js"></script>
+  <script src="/js/exports.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

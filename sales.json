@@ -1,0 +1,2572 @@
+[
+  {
+    "id": 22,
+    "date": "2025-01-01",
+    "region": "North",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 4244.16,
+    "quantity": 6,
+    "profit": 1018.6
+  },
+  {
+    "id": 16,
+    "date": "2025-01-02",
+    "region": "East",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 2751.45,
+    "quantity": 5,
+    "profit": 1128.09
+  },
+  {
+    "id": 17,
+    "date": "2025-01-02",
+    "region": "West",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 10691.52,
+    "quantity": 8,
+    "profit": 1389.9
+  },
+  {
+    "id": 13,
+    "date": "2025-01-04",
+    "region": "West",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 2878.2,
+    "quantity": 3,
+    "profit": 633.2
+  },
+  {
+    "id": 21,
+    "date": "2025-01-08",
+    "region": "North",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 187.4,
+    "quantity": 4,
+    "profit": 56.22
+  },
+  {
+    "id": 1,
+    "date": "2025-01-11",
+    "region": "South",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 1180.29,
+    "quantity": 3,
+    "profit": 342.28
+  },
+  {
+    "id": 10,
+    "date": "2025-01-11",
+    "region": "East",
+    "product": "Football",
+    "category": "Sports",
+    "sales": 411.84,
+    "quantity": 2,
+    "profit": 177.09
+  },
+  {
+    "id": 4,
+    "date": "2025-01-14",
+    "region": "West",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 1152.46,
+    "quantity": 2,
+    "profit": 437.93
+  },
+  {
+    "id": 19,
+    "date": "2025-01-15",
+    "region": "North",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 329.46,
+    "quantity": 3,
+    "profit": 92.25
+  },
+  {
+    "id": 6,
+    "date": "2025-01-16",
+    "region": "South",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 1521.18,
+    "quantity": 6,
+    "profit": 547.62
+  },
+  {
+    "id": 3,
+    "date": "2025-01-17",
+    "region": "East",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 605.22,
+    "quantity": 7,
+    "profit": 223.93
+  },
+  {
+    "id": 18,
+    "date": "2025-01-17",
+    "region": "West",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 730.59,
+    "quantity": 3,
+    "profit": 365.3
+  },
+  {
+    "id": 20,
+    "date": "2025-01-17",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 1724.92,
+    "quantity": 2,
+    "profit": 379.48
+  },
+  {
+    "id": 8,
+    "date": "2025-01-19",
+    "region": "West",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 5877.62,
+    "quantity": 7,
+    "profit": 1822.06
+  },
+  {
+    "id": 9,
+    "date": "2025-01-21",
+    "region": "North",
+    "product": "Running Shoes",
+    "category": "Sports",
+    "sales": 1034.39,
+    "quantity": 7,
+    "profit": 362.04
+  },
+  {
+    "id": 23,
+    "date": "2025-01-21",
+    "region": "South",
+    "product": "Desk",
+    "category": "Furniture",
+    "sales": 561.15,
+    "quantity": 1,
+    "profit": 207.63
+  },
+  {
+    "id": 5,
+    "date": "2025-01-22",
+    "region": "South",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 241.8,
+    "quantity": 1,
+    "profit": 65.29
+  },
+  {
+    "id": 11,
+    "date": "2025-01-22",
+    "region": "West",
+    "product": "Plant Pot",
+    "category": "Home & Garden",
+    "sales": 187.18,
+    "quantity": 1,
+    "profit": 65.51
+  },
+  {
+    "id": 14,
+    "date": "2025-01-22",
+    "region": "West",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 1985.2,
+    "quantity": 2,
+    "profit": 397.04
+  },
+  {
+    "id": 2,
+    "date": "2025-01-23",
+    "region": "North",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 262.32,
+    "quantity": 8,
+    "profit": 65.58
+  },
+  {
+    "id": 15,
+    "date": "2025-01-23",
+    "region": "East",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 1103.75,
+    "quantity": 1,
+    "profit": 286.98
+  },
+  {
+    "id": 12,
+    "date": "2025-01-25",
+    "region": "South",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 1122.24,
+    "quantity": 7,
+    "profit": 392.78
+  },
+  {
+    "id": 7,
+    "date": "2025-01-26",
+    "region": "East",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 6443.52,
+    "quantity": 6,
+    "profit": 1095.4
+  },
+  {
+    "id": 28,
+    "date": "2025-02-01",
+    "region": "South",
+    "product": "Lamp",
+    "category": "Furniture",
+    "sales": 449.48,
+    "quantity": 1,
+    "profit": 112.37
+  },
+  {
+    "id": 35,
+    "date": "2025-02-01",
+    "region": "North",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 1873.52,
+    "quantity": 4,
+    "profit": 468.38
+  },
+  {
+    "id": 36,
+    "date": "2025-02-02",
+    "region": "North",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 1848.72,
+    "quantity": 8,
+    "profit": 536.13
+  },
+  {
+    "id": 38,
+    "date": "2025-02-03",
+    "region": "North",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 286.72,
+    "quantity": 7,
+    "profit": 86.02
+  },
+  {
+    "id": 41,
+    "date": "2025-02-03",
+    "region": "West",
+    "product": "Football",
+    "category": "Sports",
+    "sales": 139.77,
+    "quantity": 1,
+    "profit": 27.95
+  },
+  {
+    "id": 40,
+    "date": "2025-02-06",
+    "region": "East",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 9332.32,
+    "quantity": 8,
+    "profit": 1493.17
+  },
+  {
+    "id": 34,
+    "date": "2025-02-09",
+    "region": "South",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 239.56,
+    "quantity": 4,
+    "profit": 126.97
+  },
+  {
+    "id": 25,
+    "date": "2025-02-10",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 388.56,
+    "quantity": 8,
+    "profit": 147.65
+  },
+  {
+    "id": 39,
+    "date": "2025-02-10",
+    "region": "East",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 1528.14,
+    "quantity": 3,
+    "profit": 657.1
+  },
+  {
+    "id": 29,
+    "date": "2025-02-11",
+    "region": "West",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 1696.05,
+    "quantity": 5,
+    "profit": 746.26
+  },
+  {
+    "id": 33,
+    "date": "2025-02-14",
+    "region": "North",
+    "product": "Lamp",
+    "category": "Furniture",
+    "sales": 1074.69,
+    "quantity": 3,
+    "profit": 376.14
+  },
+  {
+    "id": 27,
+    "date": "2025-02-21",
+    "region": "South",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 1396,
+    "quantity": 8,
+    "profit": 349
+  },
+  {
+    "id": 42,
+    "date": "2025-02-23",
+    "region": "West",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 127.16,
+    "quantity": 1,
+    "profit": 68.67
+  },
+  {
+    "id": 37,
+    "date": "2025-02-25",
+    "region": "East",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 10041.85,
+    "quantity": 7,
+    "profit": 1807.53
+  },
+  {
+    "id": 24,
+    "date": "2025-02-26",
+    "region": "East",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 2879.76,
+    "quantity": 3,
+    "profit": 460.76
+  },
+  {
+    "id": 30,
+    "date": "2025-02-26",
+    "region": "North",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 566.56,
+    "quantity": 4,
+    "profit": 198.3
+  },
+  {
+    "id": 31,
+    "date": "2025-02-27",
+    "region": "East",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 130.64,
+    "quantity": 1,
+    "profit": 41.8
+  },
+  {
+    "id": 32,
+    "date": "2025-02-27",
+    "region": "West",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 4041.21,
+    "quantity": 3,
+    "profit": 1050.71
+  },
+  {
+    "id": 26,
+    "date": "2025-02-28",
+    "region": "South",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 281.95,
+    "quantity": 1,
+    "profit": 81.77
+  },
+  {
+    "id": 56,
+    "date": "2025-03-03",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 3888.92,
+    "quantity": 4,
+    "profit": 583.34
+  },
+  {
+    "id": 64,
+    "date": "2025-03-03",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 3590.24,
+    "quantity": 8,
+    "profit": 1400.19
+  },
+  {
+    "id": 44,
+    "date": "2025-03-04",
+    "region": "North",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 2165.67,
+    "quantity": 3,
+    "profit": 389.82
+  },
+  {
+    "id": 58,
+    "date": "2025-03-05",
+    "region": "South",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 195.64,
+    "quantity": 1,
+    "profit": 97.82
+  },
+  {
+    "id": 51,
+    "date": "2025-03-06",
+    "region": "South",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 2906.2,
+    "quantity": 4,
+    "profit": 697.49
+  },
+  {
+    "id": 47,
+    "date": "2025-03-07",
+    "region": "North",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 2276.95,
+    "quantity": 5,
+    "profit": 500.93
+  },
+  {
+    "id": 50,
+    "date": "2025-03-07",
+    "region": "South",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 1449.06,
+    "quantity": 2,
+    "profit": 492.68
+  },
+  {
+    "id": 52,
+    "date": "2025-03-12",
+    "region": "South",
+    "product": "Desk",
+    "category": "Furniture",
+    "sales": 3044.16,
+    "quantity": 8,
+    "profit": 1004.57
+  },
+  {
+    "id": 60,
+    "date": "2025-03-13",
+    "region": "South",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 1772.18,
+    "quantity": 2,
+    "profit": 602.54
+  },
+  {
+    "id": 62,
+    "date": "2025-03-14",
+    "region": "South",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 788.92,
+    "quantity": 4,
+    "profit": 347.12
+  },
+  {
+    "id": 43,
+    "date": "2025-03-18",
+    "region": "West",
+    "product": "Bookshelf",
+    "category": "Furniture",
+    "sales": 942.55,
+    "quantity": 1,
+    "profit": 339.32
+  },
+  {
+    "id": 53,
+    "date": "2025-03-18",
+    "region": "West",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 1765.36,
+    "quantity": 8,
+    "profit": 476.65
+  },
+  {
+    "id": 46,
+    "date": "2025-03-19",
+    "region": "South",
+    "product": "Bookshelf",
+    "category": "Furniture",
+    "sales": 1374.35,
+    "quantity": 5,
+    "profit": 329.84
+  },
+  {
+    "id": 59,
+    "date": "2025-03-19",
+    "region": "East",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 3421.84,
+    "quantity": 8,
+    "profit": 1060.77
+  },
+  {
+    "id": 48,
+    "date": "2025-03-20",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 3795.8,
+    "quantity": 4,
+    "profit": 1024.87
+  },
+  {
+    "id": 45,
+    "date": "2025-03-21",
+    "region": "West",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 1210.92,
+    "quantity": 4,
+    "profit": 278.51
+  },
+  {
+    "id": 63,
+    "date": "2025-03-22",
+    "region": "East",
+    "product": "Running Shoes",
+    "category": "Sports",
+    "sales": 752.76,
+    "quantity": 4,
+    "profit": 173.13
+  },
+  {
+    "id": 61,
+    "date": "2025-03-23",
+    "region": "North",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 974,
+    "quantity": 8,
+    "profit": 399.34
+  },
+  {
+    "id": 54,
+    "date": "2025-03-26",
+    "region": "West",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 1046.99,
+    "quantity": 7,
+    "profit": 272.22
+  },
+  {
+    "id": 49,
+    "date": "2025-03-27",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 2368.96,
+    "quantity": 8,
+    "profit": 544.86
+  },
+  {
+    "id": 55,
+    "date": "2025-03-27",
+    "region": "West",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 1480.57,
+    "quantity": 7,
+    "profit": 458.98
+  },
+  {
+    "id": 57,
+    "date": "2025-03-27",
+    "region": "North",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 1454.94,
+    "quantity": 6,
+    "profit": 523.78
+  },
+  {
+    "id": 77,
+    "date": "2025-04-02",
+    "region": "North",
+    "product": "Lamp",
+    "category": "Furniture",
+    "sales": 5724.72,
+    "quantity": 8,
+    "profit": 2060.9
+  },
+  {
+    "id": 69,
+    "date": "2025-04-03",
+    "region": "East",
+    "product": "Curtains",
+    "category": "Home & Garden",
+    "sales": 528.18,
+    "quantity": 2,
+    "profit": 205.99
+  },
+  {
+    "id": 74,
+    "date": "2025-04-03",
+    "region": "South",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 1742.08,
+    "quantity": 8,
+    "profit": 836.2
+  },
+  {
+    "id": 82,
+    "date": "2025-04-06",
+    "region": "West",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 91.72,
+    "quantity": 2,
+    "profit": 50.45
+  },
+  {
+    "id": 65,
+    "date": "2025-04-09",
+    "region": "North",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 677.26,
+    "quantity": 2,
+    "profit": 243.81
+  },
+  {
+    "id": 85,
+    "date": "2025-04-09",
+    "region": "East",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 271.12,
+    "quantity": 1,
+    "profit": 78.62
+  },
+  {
+    "id": 84,
+    "date": "2025-04-11",
+    "region": "South",
+    "product": "Dumbbells",
+    "category": "Sports",
+    "sales": 3850.68,
+    "quantity": 6,
+    "profit": 1540.27
+  },
+  {
+    "id": 81,
+    "date": "2025-04-13",
+    "region": "North",
+    "product": "Curtains",
+    "category": "Home & Garden",
+    "sales": 3497.68,
+    "quantity": 8,
+    "profit": 1119.26
+  },
+  {
+    "id": 79,
+    "date": "2025-04-14",
+    "region": "South",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 506.4,
+    "quantity": 6,
+    "profit": 207.62
+  },
+  {
+    "id": 73,
+    "date": "2025-04-15",
+    "region": "South",
+    "product": "Lamp",
+    "category": "Furniture",
+    "sales": 7009.12,
+    "quantity": 8,
+    "profit": 1962.55
+  },
+  {
+    "id": 83,
+    "date": "2025-04-15",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 92.16,
+    "quantity": 2,
+    "profit": 30.41
+  },
+  {
+    "id": 78,
+    "date": "2025-04-16",
+    "region": "North",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 886.15,
+    "quantity": 5,
+    "profit": 345.6
+  },
+  {
+    "id": 67,
+    "date": "2025-04-17",
+    "region": "North",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 1695.16,
+    "quantity": 2,
+    "profit": 627.21
+  },
+  {
+    "id": 71,
+    "date": "2025-04-17",
+    "region": "West",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 1149.05,
+    "quantity": 7,
+    "profit": 413.66
+  },
+  {
+    "id": 72,
+    "date": "2025-04-18",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 401.5,
+    "quantity": 5,
+    "profit": 200.75
+  },
+  {
+    "id": 76,
+    "date": "2025-04-20",
+    "region": "South",
+    "product": "Curtains",
+    "category": "Home & Garden",
+    "sales": 1373.19,
+    "quantity": 7,
+    "profit": 535.54
+  },
+  {
+    "id": 68,
+    "date": "2025-04-21",
+    "region": "South",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 147.52,
+    "quantity": 4,
+    "profit": 64.91
+  },
+  {
+    "id": 75,
+    "date": "2025-04-23",
+    "region": "East",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 465.78,
+    "quantity": 6,
+    "profit": 149.05
+  },
+  {
+    "id": 70,
+    "date": "2025-04-25",
+    "region": "West",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 2741.14,
+    "quantity": 2,
+    "profit": 465.99
+  },
+  {
+    "id": 66,
+    "date": "2025-04-27",
+    "region": "West",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 4121.88,
+    "quantity": 7,
+    "profit": 906.81
+  },
+  {
+    "id": 80,
+    "date": "2025-04-28",
+    "region": "West",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 6712.1,
+    "quantity": 5,
+    "profit": 1409.54
+  },
+  {
+    "id": 97,
+    "date": "2025-05-01",
+    "region": "North",
+    "product": "Running Shoes",
+    "category": "Sports",
+    "sales": 875.94,
+    "quantity": 6,
+    "profit": 350.38
+  },
+  {
+    "id": 99,
+    "date": "2025-05-01",
+    "region": "North",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 2510.83,
+    "quantity": 7,
+    "profit": 652.82
+  },
+  {
+    "id": 94,
+    "date": "2025-05-02",
+    "region": "North",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 282.56,
+    "quantity": 4,
+    "profit": 146.93
+  },
+  {
+    "id": 104,
+    "date": "2025-05-03",
+    "region": "North",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 3500.21,
+    "quantity": 7,
+    "profit": 1015.06
+  },
+  {
+    "id": 89,
+    "date": "2025-05-05",
+    "region": "West",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 533.28,
+    "quantity": 8,
+    "profit": 277.31
+  },
+  {
+    "id": 92,
+    "date": "2025-05-05",
+    "region": "North",
+    "product": "Desk",
+    "category": "Furniture",
+    "sales": 341.01,
+    "quantity": 3,
+    "profit": 61.38
+  },
+  {
+    "id": 93,
+    "date": "2025-05-05",
+    "region": "East",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 276.34,
+    "quantity": 2,
+    "profit": 71.85
+  },
+  {
+    "id": 95,
+    "date": "2025-05-07",
+    "region": "West",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 2057.22,
+    "quantity": 6,
+    "profit": 267.44
+  },
+  {
+    "id": 105,
+    "date": "2025-05-09",
+    "region": "West",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 1281.25,
+    "quantity": 5,
+    "profit": 448.44
+  },
+  {
+    "id": 86,
+    "date": "2025-05-11",
+    "region": "North",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 627.62,
+    "quantity": 2,
+    "profit": 244.77
+  },
+  {
+    "id": 101,
+    "date": "2025-05-13",
+    "region": "West",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 1825.28,
+    "quantity": 8,
+    "profit": 602.34
+  },
+  {
+    "id": 100,
+    "date": "2025-05-14",
+    "region": "North",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 1198.22,
+    "quantity": 2,
+    "profit": 203.7
+  },
+  {
+    "id": 90,
+    "date": "2025-05-15",
+    "region": "North",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 1124.32,
+    "quantity": 8,
+    "profit": 505.94
+  },
+  {
+    "id": 88,
+    "date": "2025-05-17",
+    "region": "South",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 252.9,
+    "quantity": 1,
+    "profit": 93.57
+  },
+  {
+    "id": 91,
+    "date": "2025-05-20",
+    "region": "East",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 318.7,
+    "quantity": 2,
+    "profit": 108.36
+  },
+  {
+    "id": 102,
+    "date": "2025-05-20",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 10193.89,
+    "quantity": 7,
+    "profit": 2038.78
+  },
+  {
+    "id": 103,
+    "date": "2025-05-20",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 129.82,
+    "quantity": 1,
+    "profit": 33.75
+  },
+  {
+    "id": 96,
+    "date": "2025-05-21",
+    "region": "West",
+    "product": "Desk",
+    "category": "Furniture",
+    "sales": 513.3,
+    "quantity": 6,
+    "profit": 159.12
+  },
+  {
+    "id": 87,
+    "date": "2025-05-23",
+    "region": "East",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 1760.76,
+    "quantity": 3,
+    "profit": 704.3
+  },
+  {
+    "id": 98,
+    "date": "2025-05-24",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 4333.12,
+    "quantity": 8,
+    "profit": 866.62
+  },
+  {
+    "id": 109,
+    "date": "2025-06-01",
+    "region": "West",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 1289.4,
+    "quantity": 7,
+    "profit": 296.56
+  },
+  {
+    "id": 118,
+    "date": "2025-06-01",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 1186.5,
+    "quantity": 7,
+    "profit": 261.03
+  },
+  {
+    "id": 127,
+    "date": "2025-06-01",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 5883.05,
+    "quantity": 5,
+    "profit": 1058.95
+  },
+  {
+    "id": 106,
+    "date": "2025-06-05",
+    "region": "South",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 693.92,
+    "quantity": 4,
+    "profit": 284.51
+  },
+  {
+    "id": 116,
+    "date": "2025-06-05",
+    "region": "South",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 1748.8,
+    "quantity": 5,
+    "profit": 472.18
+  },
+  {
+    "id": 121,
+    "date": "2025-06-05",
+    "region": "West",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 292.05,
+    "quantity": 3,
+    "profit": 81.77
+  },
+  {
+    "id": 119,
+    "date": "2025-06-06",
+    "region": "North",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 3613.35,
+    "quantity": 5,
+    "profit": 1011.74
+  },
+  {
+    "id": 108,
+    "date": "2025-06-07",
+    "region": "North",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 1443.52,
+    "quantity": 8,
+    "profit": 591.84
+  },
+  {
+    "id": 107,
+    "date": "2025-06-08",
+    "region": "East",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 4506.04,
+    "quantity": 7,
+    "profit": 1892.54
+  },
+  {
+    "id": 114,
+    "date": "2025-06-09",
+    "region": "West",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 203.35,
+    "quantity": 7,
+    "profit": 79.31
+  },
+  {
+    "id": 124,
+    "date": "2025-06-09",
+    "region": "South",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 30,
+    "quantity": 1,
+    "profit": 9.9
+  },
+  {
+    "id": 110,
+    "date": "2025-06-13",
+    "region": "North",
+    "product": "Dumbbells",
+    "category": "Sports",
+    "sales": 27.42,
+    "quantity": 1,
+    "profit": 5.76
+  },
+  {
+    "id": 120,
+    "date": "2025-06-13",
+    "region": "West",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 832.89,
+    "quantity": 3,
+    "profit": 433.1
+  },
+  {
+    "id": 122,
+    "date": "2025-06-13",
+    "region": "South",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 517.08,
+    "quantity": 2,
+    "profit": 191.32
+  },
+  {
+    "id": 125,
+    "date": "2025-06-13",
+    "region": "South",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 13915.76,
+    "quantity": 8,
+    "profit": 3896.41
+  },
+  {
+    "id": 113,
+    "date": "2025-06-16",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 712.74,
+    "quantity": 3,
+    "profit": 220.95
+  },
+  {
+    "id": 126,
+    "date": "2025-06-16",
+    "region": "East",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 1964,
+    "quantity": 2,
+    "profit": 451.72
+  },
+  {
+    "id": 117,
+    "date": "2025-06-17",
+    "region": "North",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 533.93,
+    "quantity": 1,
+    "profit": 85.43
+  },
+  {
+    "id": 111,
+    "date": "2025-06-18",
+    "region": "West",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 14296.64,
+    "quantity": 8,
+    "profit": 3717.13
+  },
+  {
+    "id": 112,
+    "date": "2025-06-18",
+    "region": "East",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 1297.52,
+    "quantity": 2,
+    "profit": 285.45
+  },
+  {
+    "id": 115,
+    "date": "2025-06-21",
+    "region": "South",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 586.04,
+    "quantity": 4,
+    "profit": 187.53
+  },
+  {
+    "id": 123,
+    "date": "2025-06-27",
+    "region": "East",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 1147.93,
+    "quantity": 7,
+    "profit": 424.73
+  },
+  {
+    "id": 130,
+    "date": "2025-07-03",
+    "region": "West",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 2838.8,
+    "quantity": 8,
+    "profit": 1163.91
+  },
+  {
+    "id": 143,
+    "date": "2025-07-04",
+    "region": "North",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 2771.82,
+    "quantity": 6,
+    "profit": 665.24
+  },
+  {
+    "id": 149,
+    "date": "2025-07-04",
+    "region": "West",
+    "product": "Plant Pot",
+    "category": "Home & Garden",
+    "sales": 773.84,
+    "quantity": 8,
+    "profit": 216.68
+  },
+  {
+    "id": 134,
+    "date": "2025-07-06",
+    "region": "South",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 2400.42,
+    "quantity": 3,
+    "profit": 648.11
+  },
+  {
+    "id": 137,
+    "date": "2025-07-06",
+    "region": "East",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 5443.68,
+    "quantity": 8,
+    "profit": 762.12
+  },
+  {
+    "id": 129,
+    "date": "2025-07-07",
+    "region": "North",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 4975.6,
+    "quantity": 7,
+    "profit": 1044.88
+  },
+  {
+    "id": 145,
+    "date": "2025-07-07",
+    "region": "West",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 1868.64,
+    "quantity": 6,
+    "profit": 448.47
+  },
+  {
+    "id": 147,
+    "date": "2025-07-08",
+    "region": "East",
+    "product": "Bookshelf",
+    "category": "Furniture",
+    "sales": 1434.48,
+    "quantity": 4,
+    "profit": 301.24
+  },
+  {
+    "id": 150,
+    "date": "2025-07-09",
+    "region": "North",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 11577.86,
+    "quantity": 7,
+    "profit": 2084.01
+  },
+  {
+    "id": 128,
+    "date": "2025-07-10",
+    "region": "East",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 5816.24,
+    "quantity": 8,
+    "profit": 930.6
+  },
+  {
+    "id": 136,
+    "date": "2025-07-10",
+    "region": "East",
+    "product": "Dumbbells",
+    "category": "Sports",
+    "sales": 615.54,
+    "quantity": 2,
+    "profit": 233.91
+  },
+  {
+    "id": 148,
+    "date": "2025-07-10",
+    "region": "West",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 1770.23,
+    "quantity": 7,
+    "profit": 460.26
+  },
+  {
+    "id": 133,
+    "date": "2025-07-11",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 3885.55,
+    "quantity": 5,
+    "profit": 932.53
+  },
+  {
+    "id": 144,
+    "date": "2025-07-11",
+    "region": "East",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 5070.96,
+    "quantity": 8,
+    "profit": 1014.19
+  },
+  {
+    "id": 139,
+    "date": "2025-07-12",
+    "region": "West",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 207.34,
+    "quantity": 7,
+    "profit": 55.98
+  },
+  {
+    "id": 131,
+    "date": "2025-07-14",
+    "region": "East",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 8833.1,
+    "quantity": 5,
+    "profit": 2384.94
+  },
+  {
+    "id": 140,
+    "date": "2025-07-14",
+    "region": "North",
+    "product": "Curtains",
+    "category": "Home & Garden",
+    "sales": 296.35,
+    "quantity": 5,
+    "profit": 88.91
+  },
+  {
+    "id": 146,
+    "date": "2025-07-16",
+    "region": "West",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 3713.88,
+    "quantity": 3,
+    "profit": 817.05
+  },
+  {
+    "id": 132,
+    "date": "2025-07-17",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 468.5,
+    "quantity": 5,
+    "profit": 126.5
+  },
+  {
+    "id": 141,
+    "date": "2025-07-20",
+    "region": "North",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 1131.62,
+    "quantity": 7,
+    "profit": 588.44
+  },
+  {
+    "id": 138,
+    "date": "2025-07-25",
+    "region": "East",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 1005.78,
+    "quantity": 3,
+    "profit": 271.56
+  },
+  {
+    "id": 142,
+    "date": "2025-07-25",
+    "region": "South",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 3129.1,
+    "quantity": 5,
+    "profit": 531.95
+  },
+  {
+    "id": 135,
+    "date": "2025-07-27",
+    "region": "West",
+    "product": "Plant Pot",
+    "category": "Home & Garden",
+    "sales": 259.77,
+    "quantity": 3,
+    "profit": 75.33
+  },
+  {
+    "id": 163,
+    "date": "2025-08-02",
+    "region": "East",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 426.96,
+    "quantity": 8,
+    "profit": 166.51
+  },
+  {
+    "id": 159,
+    "date": "2025-08-07",
+    "region": "North",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 1008,
+    "quantity": 6,
+    "profit": 362.88
+  },
+  {
+    "id": 167,
+    "date": "2025-08-08",
+    "region": "West",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 1632.2,
+    "quantity": 4,
+    "profit": 326.44
+  },
+  {
+    "id": 168,
+    "date": "2025-08-08",
+    "region": "South",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 8202.95,
+    "quantity": 7,
+    "profit": 1394.5
+  },
+  {
+    "id": 154,
+    "date": "2025-08-11",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 1484.52,
+    "quantity": 4,
+    "profit": 371.13
+  },
+  {
+    "id": 155,
+    "date": "2025-08-11",
+    "region": "North",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 288.72,
+    "quantity": 2,
+    "profit": 92.39
+  },
+  {
+    "id": 158,
+    "date": "2025-08-14",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 124.86,
+    "quantity": 3,
+    "profit": 44.95
+  },
+  {
+    "id": 161,
+    "date": "2025-08-15",
+    "region": "North",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 136.28,
+    "quantity": 1,
+    "profit": 49.06
+  },
+  {
+    "id": 162,
+    "date": "2025-08-15",
+    "region": "North",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 488.2,
+    "quantity": 1,
+    "profit": 131.81
+  },
+  {
+    "id": 164,
+    "date": "2025-08-16",
+    "region": "South",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 10203.76,
+    "quantity": 8,
+    "profit": 2040.75
+  },
+  {
+    "id": 160,
+    "date": "2025-08-18",
+    "region": "South",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 157.99,
+    "quantity": 1,
+    "profit": 55.3
+  },
+  {
+    "id": 169,
+    "date": "2025-08-18",
+    "region": "North",
+    "product": "Bookshelf",
+    "category": "Furniture",
+    "sales": 797.92,
+    "quantity": 4,
+    "profit": 231.4
+  },
+  {
+    "id": 153,
+    "date": "2025-08-22",
+    "region": "South",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 5228.16,
+    "quantity": 3,
+    "profit": 1097.91
+  },
+  {
+    "id": 157,
+    "date": "2025-08-23",
+    "region": "West",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 319.26,
+    "quantity": 3,
+    "profit": 76.62
+  },
+  {
+    "id": 156,
+    "date": "2025-08-24",
+    "region": "North",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 1396.22,
+    "quantity": 7,
+    "profit": 544.53
+  },
+  {
+    "id": 166,
+    "date": "2025-08-25",
+    "region": "East",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 157.44,
+    "quantity": 3,
+    "profit": 51.96
+  },
+  {
+    "id": 151,
+    "date": "2025-08-27",
+    "region": "North",
+    "product": "Desk",
+    "category": "Furniture",
+    "sales": 3569.3,
+    "quantity": 5,
+    "profit": 856.63
+  },
+  {
+    "id": 165,
+    "date": "2025-08-27",
+    "region": "West",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 800.08,
+    "quantity": 8,
+    "profit": 264.03
+  },
+  {
+    "id": 170,
+    "date": "2025-08-27",
+    "region": "West",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 878.15,
+    "quantity": 7,
+    "profit": 263.45
+  },
+  {
+    "id": 152,
+    "date": "2025-08-28",
+    "region": "East",
+    "product": "Curtains",
+    "category": "Home & Garden",
+    "sales": 529.84,
+    "quantity": 8,
+    "profit": 211.94
+  },
+  {
+    "id": 178,
+    "date": "2025-09-04",
+    "region": "South",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 7283.28,
+    "quantity": 6,
+    "profit": 873.99
+  },
+  {
+    "id": 181,
+    "date": "2025-09-09",
+    "region": "South",
+    "product": "Vacuum Cleaner",
+    "category": "Home & Garden",
+    "sales": 2206.56,
+    "quantity": 8,
+    "profit": 772.3
+  },
+  {
+    "id": 183,
+    "date": "2025-09-09",
+    "region": "East",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 11198.8,
+    "quantity": 8,
+    "profit": 3023.68
+  },
+  {
+    "id": 177,
+    "date": "2025-09-10",
+    "region": "East",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 3277.2,
+    "quantity": 4,
+    "profit": 950.39
+  },
+  {
+    "id": 171,
+    "date": "2025-09-11",
+    "region": "West",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 6111.6,
+    "quantity": 8,
+    "profit": 1650.13
+  },
+  {
+    "id": 172,
+    "date": "2025-09-11",
+    "region": "West",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 1174.71,
+    "quantity": 1,
+    "profit": 246.69
+  },
+  {
+    "id": 176,
+    "date": "2025-09-12",
+    "region": "South",
+    "product": "Football",
+    "category": "Sports",
+    "sales": 1562.88,
+    "quantity": 4,
+    "profit": 390.72
+  },
+  {
+    "id": 187,
+    "date": "2025-09-12",
+    "region": "South",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 2982.76,
+    "quantity": 4,
+    "profit": 745.69
+  },
+  {
+    "id": 186,
+    "date": "2025-09-13",
+    "region": "South",
+    "product": "Football",
+    "category": "Sports",
+    "sales": 709.25,
+    "quantity": 5,
+    "profit": 198.59
+  },
+  {
+    "id": 179,
+    "date": "2025-09-15",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 254.86,
+    "quantity": 1,
+    "profit": 89.2
+  },
+  {
+    "id": 182,
+    "date": "2025-09-15",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 2064.18,
+    "quantity": 3,
+    "profit": 474.76
+  },
+  {
+    "id": 173,
+    "date": "2025-09-16",
+    "region": "South",
+    "product": "Running Shoes",
+    "category": "Sports",
+    "sales": 628.92,
+    "quantity": 2,
+    "profit": 163.52
+  },
+  {
+    "id": 175,
+    "date": "2025-09-19",
+    "region": "North",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 964.17,
+    "quantity": 1,
+    "profit": 231.4
+  },
+  {
+    "id": 185,
+    "date": "2025-09-20",
+    "region": "North",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 4033.74,
+    "quantity": 3,
+    "profit": 605.06
+  },
+  {
+    "id": 174,
+    "date": "2025-09-21",
+    "region": "North",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 1097.45,
+    "quantity": 5,
+    "profit": 471.9
+  },
+  {
+    "id": 184,
+    "date": "2025-09-22",
+    "region": "South",
+    "product": "Dumbbells",
+    "category": "Sports",
+    "sales": 1010.04,
+    "quantity": 6,
+    "profit": 343.41
+  },
+  {
+    "id": 189,
+    "date": "2025-09-22",
+    "region": "East",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 2625.72,
+    "quantity": 6,
+    "profit": 656.43
+  },
+  {
+    "id": 180,
+    "date": "2025-09-23",
+    "region": "West",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 1822.02,
+    "quantity": 3,
+    "profit": 400.84
+  },
+  {
+    "id": 188,
+    "date": "2025-09-27",
+    "region": "North",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 3201.7,
+    "quantity": 2,
+    "profit": 672.36
+  },
+  {
+    "id": 190,
+    "date": "2025-10-01",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 813.62,
+    "quantity": 2,
+    "profit": 154.59
+  },
+  {
+    "id": 204,
+    "date": "2025-10-02",
+    "region": "North",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 3421.2,
+    "quantity": 8,
+    "profit": 1300.06
+  },
+  {
+    "id": 207,
+    "date": "2025-10-04",
+    "region": "North",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 3237.06,
+    "quantity": 6,
+    "profit": 1230.08
+  },
+  {
+    "id": 209,
+    "date": "2025-10-04",
+    "region": "North",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 478.76,
+    "quantity": 4,
+    "profit": 244.17
+  },
+  {
+    "id": 195,
+    "date": "2025-10-05",
+    "region": "South",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 657.72,
+    "quantity": 6,
+    "profit": 263.09
+  },
+  {
+    "id": 198,
+    "date": "2025-10-05",
+    "region": "South",
+    "product": "Plant Pot",
+    "category": "Home & Garden",
+    "sales": 260.5,
+    "quantity": 1,
+    "profit": 65.13
+  },
+  {
+    "id": 203,
+    "date": "2025-10-09",
+    "region": "South",
+    "product": "Sweater",
+    "category": "Clothing",
+    "sales": 351.96,
+    "quantity": 3,
+    "profit": 158.38
+  },
+  {
+    "id": 199,
+    "date": "2025-10-10",
+    "region": "South",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 1838.72,
+    "quantity": 4,
+    "profit": 478.07
+  },
+  {
+    "id": 202,
+    "date": "2025-10-11",
+    "region": "West",
+    "product": "Football",
+    "category": "Sports",
+    "sales": 169.82,
+    "quantity": 1,
+    "profit": 39.06
+  },
+  {
+    "id": 206,
+    "date": "2025-10-12",
+    "region": "West",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 3209.56,
+    "quantity": 2,
+    "profit": 417.24
+  },
+  {
+    "id": 196,
+    "date": "2025-10-13",
+    "region": "East",
+    "product": "Smart Watch",
+    "category": "Electronics",
+    "sales": 8189.64,
+    "quantity": 6,
+    "profit": 2129.31
+  },
+  {
+    "id": 201,
+    "date": "2025-10-13",
+    "region": "South",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 205.37,
+    "quantity": 1,
+    "profit": 53.4
+  },
+  {
+    "id": 194,
+    "date": "2025-10-16",
+    "region": "West",
+    "product": "Boots",
+    "category": "Clothing",
+    "sales": 176.91,
+    "quantity": 3,
+    "profit": 58.38
+  },
+  {
+    "id": 200,
+    "date": "2025-10-16",
+    "region": "West",
+    "product": "Jeans",
+    "category": "Clothing",
+    "sales": 899.44,
+    "quantity": 4,
+    "profit": 467.71
+  },
+  {
+    "id": 208,
+    "date": "2025-10-16",
+    "region": "West",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 856.08,
+    "quantity": 3,
+    "profit": 368.11
+  },
+  {
+    "id": 192,
+    "date": "2025-10-17",
+    "region": "South",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 422.45,
+    "quantity": 7,
+    "profit": 211.23
+  },
+  {
+    "id": 191,
+    "date": "2025-10-19",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 3119.1,
+    "quantity": 6,
+    "profit": 1029.3
+  },
+  {
+    "id": 193,
+    "date": "2025-10-22",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 357.96,
+    "quantity": 3,
+    "profit": 196.88
+  },
+  {
+    "id": 197,
+    "date": "2025-10-24",
+    "region": "South",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 794.45,
+    "quantity": 5,
+    "profit": 317.78
+  },
+  {
+    "id": 205,
+    "date": "2025-10-24",
+    "region": "North",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 2292.6,
+    "quantity": 6,
+    "profit": 962.89
+  },
+  {
+    "id": 224,
+    "date": "2025-11-02",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 738.06,
+    "quantity": 6,
+    "profit": 250.94
+  },
+  {
+    "id": 218,
+    "date": "2025-11-03",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 1179.82,
+    "quantity": 2,
+    "profit": 247.76
+  },
+  {
+    "id": 226,
+    "date": "2025-11-04",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 5924.31,
+    "quantity": 7,
+    "profit": 1007.13
+  },
+  {
+    "id": 216,
+    "date": "2025-11-05",
+    "region": "West",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 2960.82,
+    "quantity": 6,
+    "profit": 1095.5
+  },
+  {
+    "id": 219,
+    "date": "2025-11-07",
+    "region": "North",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 1201.45,
+    "quantity": 5,
+    "profit": 360.44
+  },
+  {
+    "id": 227,
+    "date": "2025-11-07",
+    "region": "South",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 813.16,
+    "quantity": 2,
+    "profit": 138.24
+  },
+  {
+    "id": 225,
+    "date": "2025-11-09",
+    "region": "South",
+    "product": "Curtains",
+    "category": "Home & Garden",
+    "sales": 904.72,
+    "quantity": 8,
+    "profit": 298.56
+  },
+  {
+    "id": 223,
+    "date": "2025-11-10",
+    "region": "West",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 583.75,
+    "quantity": 5,
+    "profit": 239.34
+  },
+  {
+    "id": 228,
+    "date": "2025-11-11",
+    "region": "West",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 4657.14,
+    "quantity": 3,
+    "profit": 978
+  },
+  {
+    "id": 230,
+    "date": "2025-11-12",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 393.72,
+    "quantity": 2,
+    "profit": 141.74
+  },
+  {
+    "id": 215,
+    "date": "2025-11-14",
+    "region": "South",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 1672.17,
+    "quantity": 3,
+    "profit": 668.87
+  },
+  {
+    "id": 212,
+    "date": "2025-11-15",
+    "region": "North",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 6731.92,
+    "quantity": 8,
+    "profit": 1481.02
+  },
+  {
+    "id": 213,
+    "date": "2025-11-16",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 559.36,
+    "quantity": 2,
+    "profit": 268.49
+  },
+  {
+    "id": 214,
+    "date": "2025-11-17",
+    "region": "South",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 310.74,
+    "quantity": 2,
+    "profit": 102.54
+  },
+  {
+    "id": 222,
+    "date": "2025-11-19",
+    "region": "North",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 5597.88,
+    "quantity": 6,
+    "profit": 783.7
+  },
+  {
+    "id": 220,
+    "date": "2025-11-20",
+    "region": "East",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 10081.47,
+    "quantity": 7,
+    "profit": 1613.04
+  },
+  {
+    "id": 229,
+    "date": "2025-11-20",
+    "region": "North",
+    "product": "Running Shoes",
+    "category": "Sports",
+    "sales": 2431.04,
+    "quantity": 8,
+    "profit": 1045.35
+  },
+  {
+    "id": 221,
+    "date": "2025-11-21",
+    "region": "North",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 1248.12,
+    "quantity": 6,
+    "profit": 411.88
+  },
+  {
+    "id": 211,
+    "date": "2025-11-22",
+    "region": "South",
+    "product": "Shoes",
+    "category": "Clothing",
+    "sales": 1326.78,
+    "quantity": 7,
+    "profit": 371.5
+  },
+  {
+    "id": 210,
+    "date": "2025-11-24",
+    "region": "East",
+    "product": "Sofa",
+    "category": "Furniture",
+    "sales": 2562.96,
+    "quantity": 6,
+    "profit": 871.41
+  },
+  {
+    "id": 217,
+    "date": "2025-11-28",
+    "region": "North",
+    "product": "Garden Hose",
+    "category": "Home & Garden",
+    "sales": 171.2,
+    "quantity": 2,
+    "profit": 63.34
+  },
+  {
+    "id": 240,
+    "date": "2025-12-02",
+    "region": "North",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 5913.84,
+    "quantity": 8,
+    "profit": 1596.74
+  },
+  {
+    "id": 244,
+    "date": "2025-12-02",
+    "region": "West",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 2039.4,
+    "quantity": 5,
+    "profit": 856.55
+  },
+  {
+    "id": 233,
+    "date": "2025-12-03",
+    "region": "West",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 375.34,
+    "quantity": 7,
+    "profit": 195.18
+  },
+  {
+    "id": 238,
+    "date": "2025-12-03",
+    "region": "East",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 2844.04,
+    "quantity": 4,
+    "profit": 796.33
+  },
+  {
+    "id": 241,
+    "date": "2025-12-06",
+    "region": "East",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 1622.15,
+    "quantity": 5,
+    "profit": 405.54
+  },
+  {
+    "id": 243,
+    "date": "2025-12-07",
+    "region": "East",
+    "product": "Tablet",
+    "category": "Electronics",
+    "sales": 9097.55,
+    "quantity": 7,
+    "profit": 2183.41
+  },
+  {
+    "id": 242,
+    "date": "2025-12-10",
+    "region": "South",
+    "product": "Coffee Maker",
+    "category": "Home & Garden",
+    "sales": 201.02,
+    "quantity": 2,
+    "profit": 48.24
+  },
+  {
+    "id": 250,
+    "date": "2025-12-10",
+    "region": "North",
+    "product": "Lamp",
+    "category": "Furniture",
+    "sales": 594.04,
+    "quantity": 2,
+    "profit": 219.79
+  },
+  {
+    "id": 248,
+    "date": "2025-12-11",
+    "region": "East",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 3602.64,
+    "quantity": 8,
+    "profit": 1296.95
+  },
+  {
+    "id": 247,
+    "date": "2025-12-12",
+    "region": "South",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 592.44,
+    "quantity": 3,
+    "profit": 189.58
+  },
+  {
+    "id": 239,
+    "date": "2025-12-13",
+    "region": "North",
+    "product": "Tennis Racket",
+    "category": "Sports",
+    "sales": 2162.86,
+    "quantity": 7,
+    "profit": 475.83
+  },
+  {
+    "id": 245,
+    "date": "2025-12-13",
+    "region": "East",
+    "product": "Yoga Mat",
+    "category": "Sports",
+    "sales": 244.76,
+    "quantity": 4,
+    "profit": 51.4
+  },
+  {
+    "id": 237,
+    "date": "2025-12-14",
+    "region": "South",
+    "product": "Chair",
+    "category": "Furniture",
+    "sales": 3082.1,
+    "quantity": 5,
+    "profit": 955.45
+  },
+  {
+    "id": 232,
+    "date": "2025-12-17",
+    "region": "East",
+    "product": "T-Shirt",
+    "category": "Clothing",
+    "sales": 973.86,
+    "quantity": 6,
+    "profit": 467.45
+  },
+  {
+    "id": 251,
+    "date": "2025-12-18",
+    "region": "East",
+    "product": "Jacket",
+    "category": "Clothing",
+    "sales": 363.93,
+    "quantity": 7,
+    "profit": 116.46
+  },
+  {
+    "id": 235,
+    "date": "2025-12-20",
+    "region": "East",
+    "product": "Lamp",
+    "category": "Furniture",
+    "sales": 1142.4,
+    "quantity": 5,
+    "profit": 388.42
+  },
+  {
+    "id": 246,
+    "date": "2025-12-22",
+    "region": "South",
+    "product": "Dumbbells",
+    "category": "Sports",
+    "sales": 4154.92,
+    "quantity": 7,
+    "profit": 955.63
+  },
+  {
+    "id": 231,
+    "date": "2025-12-24",
+    "region": "North",
+    "product": "Cabinet",
+    "category": "Furniture",
+    "sales": 2601,
+    "quantity": 3,
+    "profit": 520.2
+  },
+  {
+    "id": 236,
+    "date": "2025-12-24",
+    "region": "East",
+    "product": "Blender",
+    "category": "Home & Garden",
+    "sales": 1965.04,
+    "quantity": 8,
+    "profit": 727.06
+  },
+  {
+    "id": 234,
+    "date": "2025-12-26",
+    "region": "West",
+    "product": "Monitor",
+    "category": "Electronics",
+    "sales": 2496.32,
+    "quantity": 4,
+    "profit": 499.26
+  },
+  {
+    "id": 249,
+    "date": "2025-12-28",
+    "region": "South",
+    "product": "Headphones",
+    "category": "Electronics",
+    "sales": 5562.44,
+    "quantity": 4,
+    "profit": 667.49
+  },
+  {
+    "id": 252,
+    "date": "2026-07-03",
+    "region": "North",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 50000,
+    "quantity": 15,
+    "profit": 2500
+  },
+  {
+    "id": 253,
+    "date": "2026-07-03",
+    "region": "East",
+    "product": "Phone",
+    "category": "Electronics",
+    "sales": 1200000,
+    "quantity": 51,
+    "profit": 500000
+  },
+  {
+    "id": 254,
+    "date": "2026-07-03",
+    "region": "North",
+    "product": "Bicycle",
+    "category": "Sports",
+    "sales": 52155,
+    "quantity": 5,
+    "profit": 522
+  },
+  {
+    "id": 255,
+    "date": "2026-07-03",
+    "region": "North",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 1200000,
+    "quantity": 10,
+    "profit": 5000
+  },
+  {
+    "id": 256,
+    "date": "2026-07-03",
+    "region": "North",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 152000,
+    "quantity": 5,
+    "profit": 2000
+  },
+  {
+    "id": 257,
+    "date": "2026-07-03",
+    "region": "North",
+    "product": "Laptop",
+    "category": "Electronics",
+    "sales": 120000,
+    "quantity": 52,
+    "profit": 50000
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "sales-pulse-dashboard",
+  "version": "1.0.0",
+  "description": "Full-Stack Sales Pulse Dashboard with Express backend and vanilla HTML/CSS/JS frontend.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
